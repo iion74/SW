@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SW동아리 | 메인</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .card{
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(10px);
+      border-radius:1rem;
+      box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+      border:1px solid #e2e8f0;
+    }
+    .modal{ position:fixed; inset:0; background:rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; z-index:1000; }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-slate-800">
+
+  <!-- 헤더 -->
+  <header id="mainNav" class="bg-white sticky top-0 z-50 hidden">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="font-bold text-lg">파워레인저</a>
+      <nav class="space-x-4 text-sm">
+        <a data-target="#about" class="hover:underline cursor-pointer">동아리 소개</a>
+        <a data-target="#members" class="hover:underline cursor-pointer">팀원 소개</a>
+        <a data-target="#activities" class="hover:underline cursor-pointer">월간 활동</a>
+        <a data-target="#projects" class="hover:underline cursor-pointer">프로젝트</a>
+        <a data-target="#contact" class="hover:underline cursor-pointer">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 메인 -->
+  <section id="home" class="min-h-[70vh] max-w-6xl mx-auto px-6 py-16 text-center flex flex-col items-center justify-center">
+    <img src="logo.png" alt="동아리 로고" class="w-[38rem] md:w-[44rem] mx-auto mb-8 select-none" />
+    <button id="exploreBtn" class="px-6 py-3 rounded-2xl bg-black text-blue-500 font-semibold shadow hover:shadow-md transition">둘러보기</button>
+  </section>
+
+  <!-- 동아리 소개 -->
+  <section id="about" class="max-w-6xl mx-auto px-6 pb-12 hidden">
+    <div class="card p-8">
+      <h2 class="text-2xl font-bold">동아리 소개</h2>
+      <p class="mt-3 text-slate-600" style="white-space: pre-line;">
+안녕하세요. 팀 파워레인저입니다.
+저희는 순천대학교 인공지능공학부 학부생으로 구성되어 있으며 웹사이트 개발을 중심으로 SW 역량을 키우는 것을 목표로 합니다.
+이 웹사이트는 자료를 공유하는 등 소속된 팀원들이 한 해동안 수행한 프로젝트들을 기록하는 곳입니다.
+각 팀원들이 수행한 프로젝트를 둘러보려면 팀원 소개를 눌러주세요.
+궁금한 사항은 메일로 문의 남겨주시면 감사하겠습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 팀원 소개 -->
+  <section id="members" class="max-w-6xl mx-auto px-6 pb-24 hidden">
+    <h2 class="text-2xl font-bold text-slate-800 mb-10 text-center">팀원 소개</h2>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+      <button class="flex flex-col items-center group focus:outline-none" data-member="S">
+        <img src="S.png" alt="S" class="w-40 h-40 md:w-56 md:h-56 object-contain mb-4 transition-transform group-hover:scale-105"/>
+        <p class="font-semibold">이정호</p>
+      </button>
+      <button class="flex flex-col items-center group focus:outline-none" data-member="C">
+        <img src="C.png" alt="C" class="w-40 h-40 md:w-56 md:h-56 object-contain mb-4 transition-transform group-hover:scale-105"/>
+        <p class="font-semibold">장태영</p>
+      </button>
+      <button class="flex flex-col items-center group focus:outline-none" data-member="N">
+        <img src="N.png" alt="N" class="w-40 h-40 md:w-56 md:h-56 object-contain mb-4 transition-transform group-hover:scale-105"/>
+        <p class="font-semibold">김예진</p>
+      </button>
+      <button class="flex flex-col items-center group focus:outline-none" data-member="U">
+        <img src="U.png" alt="U" class="w-40 h-40 md:w-56 md:h-56 object-contain mb-4 transition-transform group-hover:scale-105"/>
+        <p class="font-semibold">안호영</p>
+      </button>
+      <button class="flex flex-col items-center group focus:outline-none" data-member="AI">
+        <img src="AI.png" alt="AI" class="w-40 h-40 md:w-56 md:h-56 object-contain mb-4 transition-transform group-hover:scale-105"/>
+        <p class="font-semibold">장원석</p>
+      </button>
+    </div>
+  </section>
+
+  <!-- 이정호(S) 프로젝트 -->
+  <section id="projects-S" class="max-w-6xl mx-auto px-6 pb-12 hidden">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6">이정호의 프로젝트</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">G-RISE: SW 창업아이디어 경진대회</h3>
+        <p class="mt-2 text-sm text-slate-600">2025.09.05(금) 13:00–18:00 · 국립순천대학교 국제문화컨벤션관(F1) 1층 소극장</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="이정호_창업경진대회.jpg">보기</a>
+      </article>
+
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">2025 스마트미디어 추계학술대회</h3>
+        <p class="mt-2 text-sm text-slate-600">2025.11.04(금) – 11.06(일) · RAG + Function Calling 기반 사용자 문서형 하이브리드 AI 에이전트 설계</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="이정호_추계학술대회.jpg">보기</a>
+      </article>
+
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">2025 SW중심대학 디지털 경진대회</h3>
+        <p class="mt-2 text-sm text-slate-600">2025.07.01 – 08.12 · 딥러닝 기반 한국어 텍스트 반사회적 요소 자동 검출 및 윤리성 평가</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="이정호_디지털경진대회.jpg">보기</a>
+      </article>
+
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">2025 SW중심대학 호남권 LLM 해커톤 경진대회</h3>
+        <p class="mt-2 text-sm text-slate-600">2025.08.28 – 08.30 · 소노밸 변산(전라북도 변산) · 우수상 수상</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="이정호_LLM해커톤.jpg">보기</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 장태영(C) 프로젝트 — 새로 추가 -->
+  <section id="projects-C" class="max-w-6xl mx-auto px-6 pb-12 hidden">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6">장태영의 프로젝트</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">2025 스마트미디어학회 춘계학술대회</h3>
+        <p class="mt-2 text-sm text-slate-600">2025.05.01 – 05.03 · 중앙대학교 100주년 기념관<br/>소셜 미디어 바이럴 콘텐츠 변화 예측을 위한 GT-TGN 모델 설계</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="장태영_춘계학술대회.jpg">보기</a>
+      </article>
+
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">2025 SW중심대학 학생 학술교류 대회</h3>
+        <p class="mt-2 text-sm text-slate-600">2025.08.20 – 08.22 · 여수 디오션 콘도</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="장태영_학술교류대회.jpg">보기</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 김예진/안호영/장원석 -->
+  <section id="projects-N" class="max-w-6xl mx-auto px-6 pb-12 hidden">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6">김예진의 프로젝트</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">스마트팜 리서치</h3>
+        <p class="mt-2 text-sm text-slate-600">센서/프로토콜 비교와 가격, 활용사례 분석 리포트</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline">리포트</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects-U" class="max-w-6xl mx-auto px-6 pb-12 hidden">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6">안호영의 프로젝트</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">데이터 시각화 도구 개발</h3>
+        <p class="mt-2 text-sm text-slate-600">Python/Chart.js 기반 대시보드</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects-AI" class="max-w-6xl mx-auto px-6 pb-12 hidden">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6">장원석의 프로젝트</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">2025 한국스마트미디어학회 & 한국전자거래학회 춘계학술대회</h3>
+        <p class="mt-2 text-sm text-slate-600">객체 탐지를 활용한 재활용 쓰레기 분류 시스템 설계</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="장원석_춘계학술대회.jpg">보기</a>
+      </article>
+
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">2025 한국멀티미디어학회 추계학술대회</h3>
+        <p class="mt-2 text-sm text-slate-600">온디바이스 환경 재활용 쓰레기 시스템 설계를 위한 객체탐지 모델 성능비교</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="장원석_추계학술대회.jpg">보기</a>
+      </article>
+
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">학술 교류 대회</h3>
+        <p class="mt-2 text-sm text-slate-600">객체 탐지를 활용한 재활용 쓰레기 분류 시스템 설계</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="장원석_학술교류대회.png">보기</a>
+      </article>
+
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">2025 SW중심대학 호남권 LLM 해커톤 경진대회</h3>
+        <p class="mt-2 text-sm text-slate-600">우수상 수상</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="장원석_LLM해커톤.png">보기</a>
+      </article>
+
+      <article class="card p-5">
+        <h3 class="font-semibold text-lg">지역 수요 맞춤형 & 대학생 지향형 비교과 연구</h3>
+        <p class="mt-2 text-sm text-slate-600">엣지 컴퓨팅 기반 실시간 재활용품 분류 시스템 개발</p>
+        <a href="#" class="mt-3 inline-block text-blue-600 text-sm underline view-image" data-image="장원석_비교과연구.png">보기</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 월간 활동 (4~10월) -->
+  <section id="activities" class="max-w-6xl mx-auto px-6 pb-16 hidden">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6">월간 활동</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-6">
+        <h3 class="font-semibold">4월 — 동아리 활동에 대한 전반적인 계획 회의</h3>
+        <ul class="mt-3 list-disc pl-5 text-slate-600 text-sm">
+          <li>팀 구성 및 역할 정의</li>
+          <li>본격적인 활동에 앞서 동아리 내 주요 공지사항 검토</li>
+          <li>동아리 활동을 위한 사전조사</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold">5월 — 동아리 활동 관련 도서 정하기</h3>
+        <ul class="mt-3 list-disc pl-5 text-slate-600 text-sm">
+          <li>동아리원의 IT 기술에 대한 지식 파악</li>
+          <li>스터디 교재 선정 :『러닝스쿨! 한 권으로 끝내는 HTML+CSS 웹 디자인 입문』</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold">6월 — 웹 사이트 구축을 위한 활동 데이터 수집</h3>
+        <ul class="mt-3 list-disc pl-5 text-slate-600 text-sm">
+          <li>웹사이트의 핵심이 될 콘텐츠 준비</li>
+          <li>각 팀원 프로젝트 데이터 수집</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold">7월 — 웹사이트 설계 및 구축</h3>
+        <ul class="mt-3 list-disc pl-5 text-slate-600 text-sm">
+          <li>수집 데이터 반영한 디자인 계획</li>
+          <li>전체 메뉴 구조/레이아웃 확정</li>
+          <li>기초 코드 세팅</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold">8월 — 웹사이트 개발 집중</h3>
+        <ul class="mt-3 list-disc pl-5 text-slate-600 text-sm">
+          <li>역할 분담 후 코딩 착수</li>
+          <li>핵심 기능 구현</li>
+          <li>중간 점검 회의로 에러 해결</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold">9월 — 디자인 수정 및 최종</h3>
+        <ul class="mt-3 list-disc pl-5 text-slate-600 text-sm">
+          <li>시각요소 보완</li>
+          <li>최신 콘텐츠 반영</li>
+          <li>테스트 & 버그 수정</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold">10월 — 프로젝트 결과물 도출 및 테스트</h3>
+        <ul class="mt-3 list-disc pl-5 text-slate-600 text-sm">
+          <li>발표/포스터 제작</li>
+          <li>최종 점검 및 배포</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의 -->
+  <section id="contact" class="bg-white hidden">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">문의</h2>
+      <form action="mailto:powerranger5scnu@gmail.com" method="post" enctype="text/plain" class="mt-4 grid gap-4 md:grid-cols-2">
+        <input name="이름" class="p-3 rounded-xl border" placeholder="이름" required />
+        <input name="이메일" type="email" class="p-3 rounded-xl border" placeholder="이메일" required />
+        <textarea name="메시지" class="md:col-span-2 p-3 rounded-xl border" rows="4" placeholder="메시지" required></textarea>
+        <button type="submit" class="md:col-span-2 px-5 py-3 rounded-2xl bg-black text-blue-500 font-semibold">보내기</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center text-slate-600 text-sm py-10">© 2025 SW동아리</footer>
+
+  <!-- 스크립트 -->
+  <script>
+    const exploreBtn = document.getElementById('exploreBtn');
+    const mainNav = document.getElementById('mainNav');
+    const sections = Array.from(document.querySelectorAll('section[id]')).filter(s => s.id !== 'home');
+
+    function showOnly(selector){
+      sections.forEach(s => s.classList.add('hidden'));
+      const el = document.querySelector(selector);
+      if(el) el.classList.remove('hidden');
+    }
+
+    // 둘러보기 → 팀원 소개만
+    exploreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      mainNav.classList.remove('hidden');
+      showOnly('#members');
+      document.querySelector('#members').scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+
+    // 네비게이션 클릭
+    document.querySelectorAll('header nav a[data-target]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const t = a.getAttribute('data-target');
+        if(t){ mainNav.classList.remove('hidden'); showOnly(t); document.querySelector(t).scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+
+    // 팀원 클릭 → 해당 멤버의 프로젝트 섹션 보여주기
+    document.querySelectorAll('#members [data-member]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const key = btn.getAttribute('data-member'); // S, C, N, U, AI
+        showOnly(`#projects-${key}`);
+        document.querySelector(`#projects-${key}`).scrollIntoView({ behavior:'smooth' });
+      });
+    });
+
+    // 보기 버튼: 이미지 모달 (이벤트 위임)
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('.view-image');
+      if(!link) return;
+      e.preventDefault();
+      const src = link.getAttribute('data-image');
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.innerHTML = `
+        <div class="bg-white rounded-xl shadow-2xl p-3 md:p-4 max-w-4xl w-[92%]">
+          <div class="text-right">
+            <button id="closeModal" class="px-3 py-1 text-sm rounded-md bg-black text-blue-500">닫기</button>
+          </div>
+          <img src="${src}" alt="프로젝트 이미지" class="max-h-[78vh] w-auto mx-auto rounded-lg mt-2"/>
+        </div>`;
+      document.body.appendChild(modal);
+
+      // 닫기: 배경 클릭 / 버튼 클릭 / ESC
+      modal.addEventListener('click', (ev)=>{ if(ev.target === modal) modal.remove(); });
+      modal.querySelector('#closeModal').addEventListener('click', ()=> modal.remove());
+      window.addEventListener('keydown', function onEsc(ev){ if(ev.key === 'Escape'){ modal.remove(); window.removeEventListener('keydown', onEsc); }});
+    });
+  </script>
+</body>
+</html>
